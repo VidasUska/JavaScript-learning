@@ -291,7 +291,7 @@
 
 //******* EXercise 11 *******/ Prime numbers
 
-showPrimes(27);
+// showPrimes(27);
 
 // one fuction
 
@@ -310,13 +310,13 @@ showPrimes(27);
 
 // two functions for each job
 
-function showPrimes(limit) {
-  for (number = 2; number <= limit; number++)
-    if (isPrime(number)) console.log(number);
-}
+// function showPrimes(limit) {
+//   for (number = 2; number <= limit; number++)
+//     if (isPrime(number)) console.log(number);
+// }
 
-function isPrime(number) {
-  for (factor = 2; factor < number; factor++)
-    if (number % factor === 0) return false;
-  return true;
-}
+// function isPrime(number) {
+//   for (factor = 2; factor < number; factor++)
+//     if (number % factor === 0) return false;
+//   return true;
+// }
