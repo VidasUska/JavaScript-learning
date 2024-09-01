@@ -270,10 +270,4 @@ let priceRange = [
   { label: "$$$", tooltip: "Expensive", minPerPerson: 21, maxPerPerson: 50 },
 ];
 
-<<<<<<< HEAD
-let restorant = [{ averagePerPerson: 5 }];
-=======
-// let restorant = [{ averagePerPerson: 5 }];
-
-kalabybiskes 2 
->>>>>>> features
+olololololo;
