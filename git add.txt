@@ -33,3 +33,21 @@ git branch -a                             - To see all local and remote branches
 
 git branch -r                             - To see all remote branch names, run git branch -r
 
+
+
+Merge
+
+
+First, we need to switch to the (main) branch (if changes/commit were made on (features) branch):
+git checkout main
+
+Now we merge the current branch (main) with (features):
+git merge features
+
+As (main) and (features) are essentially the same now, we can delete (features), as it is no longer needed
+git branch -d features
+
+
+
+
+
