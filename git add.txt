@@ -1,0 +1,22 @@
+ cd (folder path)                         -example:  cd C:\Users\Praxis\Desktop\Code with Mosh\JavaScript\JS-BASICS (in command to work on this folder)
+
+git init                                   - initialize git in chosen directory (folder (.git) will be added )   
+
+                                           - make changes (update file, change/update code, add file, delete file in repository folder.....)
+
+git add .                                  -add changes to be commited (ready to commit)
+
+git status                                 -check status of that repo (what changed are made(ready to commit), what need commit))
+
+git commit -m "7th test commit"            -commit changes (if were added to be commited (git add .))
+
+git restore (file name)                    - example: git restore index.js (respore changes)
+
+git restore --staged (file name)           - example: git restore --staged test2.txt     ;Undo commit for file: test2.txt
+
+echo "This is a test file" > test2.txt     -create file in command field (on that folder). "This is a test file" - will be text in file, and file name
+
+git log                                    - shows commits made
+
+
+ 
