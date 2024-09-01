@@ -18,5 +18,18 @@ echo "This is a test file" > test2.txt     -create file in command field (on tha
 
 git log                                    - shows commits made
 
+git branch -m old-name new-name            - change branch name (example from master to main)
 
- 
+
+
+Branch
+
+
+git checkout -b features                  - create new branch name (features) and switch to it
+
+git checkout main                         - switch to branch (main)
+
+git branch -a                             - To see all local and remote branches, run git branch -a
+
+git branch -r                             - To see all remote branch names, run git branch -r
+
