@@ -259,10 +259,10 @@
 //     (this.isLive = false);
 // }
 
-// let poster = new Post("Amazing Post", "This is test body", "Vidas");
-// console.log(poster);
+// // let poster = new Post("Amazing Post", "This is test body", "Vidas");
+// // console.log(poster);
 
-//*********** 20- Exercise 6- Price Range Object ********//
+// //*********** 20- Exercise 6- Price Range Object ********//
 
 let priceRange = [
   { label: "$", tooltip: "Inexpensive", minPerPerson: 0, maxPerPerson: 10 },
@@ -270,4 +270,10 @@ let priceRange = [
   { label: "$$$", tooltip: "Expensive", minPerPerson: 21, maxPerPerson: 50 },
 ];
 
+<<<<<<< HEAD
 let restorant = [{ averagePerPerson: 5 }];
+=======
+// let restorant = [{ averagePerPerson: 5 }];
+
+kalabybiskes 2 
+>>>>>>> features
