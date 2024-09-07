@@ -17,25 +17,39 @@
 
 //****************** 3- Finding Elements (Primitives) ************//
 
-const numbers = [1, 2, 3, 4, 1, 5, 3, 7];
+// const numbers = [1, 2, 3, 4, 1, 5, 3, 7];
 
-// we past element and it returns index of that element in the array, if not exist returns "-1"
-console.log(numbers.indexOf("a")); // returns '-1'
+// // we past element and it returns index of that element in the array, if not exist returns "-1"
+// console.log(numbers.indexOf("a")); // returns '-1'
 
-console.log(numbers.indexOf(3)); // returns '2'
+// console.log(numbers.indexOf(3)); // returns '2'
 
-// to find index from index. first numer elemnet, 2nd indext from where to find
+// // to find index from index. first numer elemnet, 2nd indext from where to find
 
-console.log(numbers.indexOf(3, 4)); // return '6'
+// console.log(numbers.indexOf(3, 4)); // return '6'
 
-// lastIndex returs index of that elemnet
+// // lastIndex returs index of that elemnet
 
-console.log(numbers.lastIndexOf(1)); // returns '4'
+// console.log(numbers.lastIndexOf(1)); // returns '4'
 
-// if element exist in array
+// // if element exist in array
 
-console.log(numbers.indexOf(1) !== -1); // returns 'true' because it is not equal to '-1' (-1 means not exist)
+// console.log(numbers.indexOf(1) !== -1); // returns 'true' because it is not equal to '-1' (-1 means not exist)
 
-// new method exist element
+// // new method exist element
 
-console.log(numbers.includes(1)); // returns 'true'
+// console.log(numbers.includes(1)); // returns 'true'
+
+//********************** 4- Finding Elements (Reference Types) *****************//
+// javascript array find in internet
+
+const courses = [
+  { id: 1, name: "a" },
+  { id: 2, name: "b" },
+];
+
+const found = courses.find(function (course) {
+  return course.name === "b";
+});
+
+console.log(found);
