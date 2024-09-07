@@ -43,13 +43,37 @@
 //********************** 4- Finding Elements (Reference Types) *****************//
 // javascript array find in internet
 
+// const courses = [
+//   { id: 1, name: "a" },
+//   { id: 2, name: "b" },
+// ];
+
+// const found = courses.find(function (course) {
+//   return course.name === "b";
+// });
+
+// console.log(found);
+
+// Find index. (-1 if not exist. If exist shows index of first element of given criterion)
+
+// const courses = [
+//   { id: 1, name: "a" },
+//   { id: 2, name: "b" },
+// ];
+
+// const found = courses.findIndex(function (course) {
+//   return course.name === "a";
+// });
+
+// console.log(found);
+
+//----------------- 5- Arrow Functions -----------------//
+
 const courses = [
   { id: 1, name: "a" },
   { id: 2, name: "b" },
 ];
 
-const found = courses.find(function (course) {
-  return course.name === "b";
-});
+const found = courses.findIndex((course) => course.name === "a");
 
 console.log(found);
