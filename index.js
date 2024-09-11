@@ -126,9 +126,183 @@
 // console.log(another);
 
 //---Option 3
-let numbers = [1, 2, 3, 4];
-let another = numbers;
-while (numbers.length > 0) numbers.pop(); // not recommended if long array, will be performing cost, (you will call it millinion time if array has million objects)
+// let numbers = [1, 2, 3, 4];
+// let another = numbers;
+// while (numbers.length > 0) numbers.pop(); // not recommended if long array, will be performing cost, (you will call it millinion time if array has million objects)
 
-console.log(numbers);
-console.log(another);
+// console.log(numbers);
+// console.log(another);
+
+//******************** 8- Combining and Slicing Arrays **********//
+
+// primitive values
+
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+
+// const combine = first.concat(second);
+// first[0] = 10;
+
+// const slice = combine.slice(2, 4);
+
+// console.log(combine);
+// console.log(slice);
+
+// //with (objects (type reference) are not copied himself, type reference are copied) if premetive - copied by value
+
+// const first = [{ id: 1 }];
+// const second = [4, 5, 6];
+// first[0].id = 10;
+
+// const combine = first.concat(second);
+
+// const slice = combine.slice();
+
+// console.log(combine);
+// console.log(slice);
+
+//**************** 9- The Spread Operator *************//
+
+// const first = [{ id: 1 }];
+// const second = [4, 5, 6];
+
+// const combine = [...first, "a", ...second, "b"];
+
+// const copy = [...combine]; // instead of: const copy = combine.slice();
+
+// console.log(combine);
+// console.log(copy);
+
+//********************* 10- Iterating an Array *************//
+
+// const numbers = [1, 2, 3];
+
+// for (let number in numbers) console.log(number);
+
+// // or
+
+// numbers.forEach((number) => console.log(number));
+
+// // this callback f can take secondary parameter index
+
+// numbers.forEach((number, index) => console.log(number, index));
+
+//********************* 11- Joining Arrays ***************//
+
+// const numbers = [1, 2, 3];
+// const joined = numbers.join(",");
+
+// console.log(joined);
+
+// const message = "This is my first message";
+// const parts = message.split(" ");
+
+// console.log(parts);
+
+// const combined = parts.join("-");
+
+// console.log(combined);
+
+//********************** 12- Sorting Arrays ***************//
+
+//when you have numbers and strings in the array (not an objects)
+// const numbers = [2, 3, 1];
+
+// numbers.sort();
+// console.log(numbers);
+
+// numbers.reverse();
+// console.log(numbers);
+
+//when you have objects in array need extra function
+
+// const courses = [
+//   { id: 1, name: "Node.js" },
+//   { id: 2, name: "JavaScript" },
+// ];
+
+// courses.sort(function (a, b) {
+//   if (a.name < b.name) return -1;
+//   if (a.name > b.name) return 1;
+// });
+
+//it is letters sensitive, J comes first to N, but j comes after N.
+//We can set letter to upper all lower cases or upper cases
+
+// const courses = [
+//   { id: 1, name: "Node.js" },
+//   { id: 2, name: "javaScript" },
+// ];
+
+// courses.sort(function (a, b) {
+//   const nameA = a.name.toUpperCase();
+//   const nameB = b.name.toUpperCase();
+
+//   if (nameA < nameB) return -1;
+//   if (nameA > nameB) return 1;
+// });
+
+// console.log(courses);
+
+//******************** 13- Testing the Elements of an Array *************//
+
+// //"every" - If evry element match givent criterior, then treu (at least one not, returns false)
+// const numbers = [1, , -6, 2, 3];
+
+// const allPositive = numbers.every(function (value) {
+//   return value >= 0;
+// });
+
+// console.log(allPositive);
+
+//"some" - enough one element to match given criterior
+// const numbers = [1, , -6, 2, 3];
+
+// const atLeastOnePossitive = numbers.some(function (value) {
+//   return value >= 0;
+// });
+
+// console.log(atLeastOnePossitive);
+
+//*********************** 14- Filtering an Array *************//
+
+//example filtering open restorants
+// const numbers = [1, , -6, 2, 3];
+
+// const filtered = numbers.filter((n) => n >= 0);
+
+// console.log(filtered);
+
+//********************** 15- Mapping an Array ******************//
+
+// const numbers = [1, , -6, 2, 3];
+
+// const filtered = numbers.filter((n) => n >= 0);
+
+// const item = filtered.map((n) => "<li>" + n + "</li>"); // returns: ['<li>1</li>', '<li>2</li>', '<li>3</li>']
+
+// const html = "<ul>" + item.join("") + "</ul>";          // returns: <ul><li>1</li><li>2</li><li>3</li></ul>
+
+// console.log(html);
+
+//with object
+
+// const numbers = [1, , -6, 2, 3];
+
+// const filtered = numbers.filter((n) => n >= 0);
+
+// const item = filtered.map((n) => ({ value: n }));
+
+// console.log(item);
+
+// //chaining!!!!!! // get rid off "const filtered"
+
+const numbers = [1, -6, 2, 3];
+
+const item = numbers
+  .filter((n) => n >= 0)
+  .map((n) => ({ value: n }))
+  .filter((obj) => obj.value > 1)
+  .map((obj) => obj.value); // returns: (2) [2, 3]
+
+console.log(item);
