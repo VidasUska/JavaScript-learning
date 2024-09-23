@@ -24,7 +24,7 @@
 
 // console.log(numbers.indexOf(3)); // returns '2'
 
-// // to find index from index. first numer elemnet, 2nd indext from where to find
+// // to find index from index. first number elemnet, 2nd indext from where to find
 
 // console.log(numbers.indexOf(3, 4)); // return '6'
 
@@ -177,9 +177,9 @@
 
 // const numbers = [1, 2, 3];
 
-// for (let number in numbers) console.log(number);
+// // for (let number in numbers) console.log(number);
 
-// // or
+// // // or
 
 // numbers.forEach((number) => console.log(number));
 
@@ -246,7 +246,7 @@
 
 //******************** 13- Testing the Elements of an Array *************//
 
-// //"every" - If evry element match givent criterior, then treu (at least one not, returns false)
+// //"every" - If evry element match givent criterior, then true (at least one not, returns false)
 // const numbers = [1, , -6, 2, 3];
 
 // const allPositive = numbers.every(function (value) {
@@ -281,7 +281,7 @@
 
 // const item = filtered.map((n) => "<li>" + n + "</li>"); // returns: ['<li>1</li>', '<li>2</li>', '<li>3</li>']
 
-// const html = "<ul>" + item.join("") + "</ul>";          // returns: <ul><li>1</li><li>2</li><li>3</li></ul>
+// const html = "<ul>" + item.join("") + "</ul>"; // returns: <ul><li>1</li><li>2</li><li>3</li></ul>
 
 // console.log(html);
 
@@ -297,12 +297,71 @@
 
 // //chaining!!!!!! // get rid off "const filtered"
 
-const numbers = [1, -6, 2, 3];
+// const numbers = [1, -6, 2, 3];
 
-const item = numbers
-  .filter((n) => n >= 0)
-  .map((n) => ({ value: n }))
-  .filter((obj) => obj.value > 1)
-  .map((obj) => obj.value); // returns: (2) [2, 3]
+// const item = numbers
+//   .filter((n) => n >= 0)
+//   .map((n) => ({ value: n }))
+//   .filter((obj) => obj.value > 1)
+//   .map((obj) => obj.value); // returns: (2) [2, 3]
 
-console.log(item);
+// console.log(item);
+
+//************************** 16- Reducing an Array **************//
+
+// example counting order items total
+// const numbers = [1, -1, 2, 3];
+
+// let sum = 0;
+
+// for (let n of numbers) sum += n;
+
+// console.log(sum);
+
+// for simpler way use reduce method
+
+// const numbers = [1, -1, 2, 3];
+
+// const item = numbers.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue
+// );
+
+// console.log(item);
+
+//*************** 17- Exercise 1- Array from Range *************//
+
+// const numbers = arrayFromRange(2, 9);
+
+// console.log(numbers);
+
+// function arrayFromRange(min, max) {
+//   output = [];
+//   for (let i = min; i <= max; i++) output.push(i);
+//   return output;
+// }
+
+//***************** 18- Exercise 2- Includes **************//
+
+// const numbers = [1, 2, 3, 4];
+
+// console.log(includes(numbers, 4));
+
+// function includes(array, searchElement) {
+//   for (let element of array) if (element === searchElement) return true;
+//   return false;
+// }
+
+//******************** 19- Exercise 3- Except ************//
+
+const numbers = [1, 2, 3, 4, 1, 1, 2];
+
+const output = except(numbers, [1, 2]);
+
+console.log(output);
+
+function except(array, exclude) {
+  let output = [];
+  for (let element of array)
+    if (!exclude.includes(element)) output.push(element);
+  return output;
+}
