@@ -353,15 +353,15 @@
 
 //******************** 19- Exercise 3- Except ************//
 
-const numbers = [1, 2, 3, 4, 1, 1, 2];
+// const numbers = [1, 2, 3, 4, 1, 1, 2];
 
-const output = except(numbers, [1, 2]);
+// const output = except(numbers, [1, 2]);
 
-console.log(output);
+// console.log(output);
 
-function except(array, exclude) {
-  let output = [];
-  for (let element of array)
-    if (!exclude.includes(element)) output.push(element);
-  return output;
-}
+// function except(array, exclude) {
+//   let output = [];
+//   for (let element of array)
+//     if (!exclude.includes(element)) output.push(element);
+//   return output;
+// }
